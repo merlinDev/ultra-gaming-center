@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="752.0" style="-fx-background-color: #1C1B1C;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamerequest.GameRequestsController">
+   <children>
+      <AnchorPane layoutX="423.0" layoutY="135.0" prefHeight="790.0" prefWidth="1309.0" style="-fx-background-color: #222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="70.0" layoutY="61.0" prefHeight="210.0" prefWidth="612.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="61.0">
+               <children>
+                  <JFXTextField fx:id="search" focusColor="#e4e4e4" labelFloat="true" layoutX="14.0" layoutY="36.0" onKeyReleased="#searchGName" prefHeight="25.0" prefWidth="200.0" promptText="Search Game Name" style="-fx-text-fill: #ffffff;" unFocusColor="#d0c4c4" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="36.0" />
+                  <Label fx:id="numreq" layoutX="915.0" layoutY="31.0" prefHeight="31.0" prefWidth="131.0" style="-fx-text-fill: #ffffff;" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="915.0" layoutY="11.0" text="No of Requests" textFill="WHITE" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="70.0" layoutY="179.0" prefHeight="323.0" prefWidth="612.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0">
+               <children>
+                  <Label layoutX="989.0" layoutY="14.0" prefHeight="20.0" prefWidth="166.0" text="Requested Game Details" textFill="WHITE" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="table" layoutX="32.0" layoutY="14.0" prefHeight="200.0" prefWidth="447.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+                    <columns>
+                      <TableColumn fx:id="nic" prefWidth="75.0" text="NIC" />
+                      <TableColumn fx:id="gname" prefWidth="75.0" text="Game Name" />
+                        <TableColumn fx:id="description" prefWidth="49.0" text="Description" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children></AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxWidth="280.0" prefHeight="768.0" prefWidth="280.0" style="-fx-background-color: #38454e;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.SidePanelContentController">
+   <children>
+      <AnchorPane prefHeight="453.0" prefWidth="280.0">
+         <children>
+            <ImageView fitHeight="453.0" fitWidth="280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../res/sliderBack.jpg" />
+               </image>
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </ImageView>
+            <Label fx:id="slider_time" alignment="CENTER" layoutY="2.0" prefHeight="29.0" prefWidth="280.0" text="23:42" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane opacity="0.5" prefHeight="225.0" prefWidth="280.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <effect>
+                  <BoxBlur height="14.11" iterations="3" width="0.0" />
+               </effect>
+            </Pane>
+            <AnchorPane fx:id="slider_TopPanelGuest" prefHeight="453.0" prefWidth="280.0" visible="false">
+               <children>
+                  <Label alignment="BOTTOM_CENTER" layoutY="46.0" prefHeight="81.0" prefWidth="280.0" text="Welcome" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="12.1" radius="8.5175" spread="0.57" width="23.97" />
+                     </effect>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutY="127.0" prefHeight="71.0" prefWidth="280.0" text="Ultra Gaming Center" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="12.1" radius="8.5175" spread="0.57" width="23.97" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="slider_tokenNumber" alignment="BOTTOM_CENTER" layoutY="230.0" prefHeight="41.0" prefWidth="280.0" text="N/A" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="slider_TimeSinceLoggedIn" alignment="BOTTOM_CENTER" layoutY="307.0" prefHeight="29.0" prefWidth="280.0" text="00 hour(s) 00 minute(s) 00 second(s)" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutY="336.0" prefHeight="29.0" prefWidth="280.0" text="since logged in" textFill="#d1d1d1" wrapText="true" />
+                  <Label alignment="CENTER" layoutY="272.0" prefHeight="29.0" prefWidth="280.0" text="Token number" textFill="#d1d1d1" wrapText="true" />
+                  <Label fx:id="slider_charge" alignment="CENTER" layoutY="401.0" prefHeight="29.0" prefWidth="280.0" text="00.00 LKR" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="BOTTOM_CENTER" layoutY="371.0" prefHeight="29.0" prefWidth="280.0" text="Charge (approx.)" textFill="#d1d1d1" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="slider_TopPanelMember" prefHeight="453.0" prefWidth="280.0">
+               <children>
+                  <Label fx:id="slider_gamerNameMember" alignment="BOTTOM_CENTER" layoutY="46.0" prefHeight="81.0" prefWidth="280.0" text="GamerName" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="12.1" radius="8.5175" spread="0.57" width="23.97" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="slider_NameMember" alignment="TOP_CENTER" layoutY="127.0" prefHeight="71.0" prefWidth="280.0" text="Name" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="12.1" radius="8.5175" spread="0.57" width="23.97" />
+                     </effect>
+                  </Label>
+                  <Label fx:id="slider_packageNameMember" alignment="CENTER" contentDisplay="CENTER" layoutY="280.0" prefHeight="29.0" prefWidth="280.0" text="Package Name" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="slider_remainingTimeMember" alignment="BOTTOM_CENTER" layoutY="315.0" prefHeight="29.0" prefWidth="280.0" text="00 hour(s) 00 minute(s) 00 second(s)" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="slider_expirationDateMember" alignment="CENTER" layoutY="405.0" prefHeight="29.0" prefWidth="280.0" text="DD / MM / YYYY" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="remainingTimelbl" alignment="CENTER" layoutY="344.0" prefHeight="29.0" prefWidth="280.0" text="Remaining for today" textFill="#d1d1d1" wrapText="true" />
+                  <Label fx:id="validUntil" alignment="BOTTOM_CENTER" layoutY="375.0" prefHeight="29.0" prefWidth="280.0" text="Valid until" textFill="#d1d1d1" wrapText="true" />
+                  <Label alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutY="250.0" prefHeight="29.0" prefWidth="280.0" text="Package " textFill="#d1d1d1" wrapText="true" />
+                  <Label fx:id="slider_chargeMember" alignment="CENTER" layoutY="401.0" prefHeight="29.0" prefWidth="280.0" text="00.00 LKR" textFill="WHITE" visible="false" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chargeLbl" alignment="BOTTOM_CENTER" layoutY="371.0" prefHeight="29.0" prefWidth="280.0" text="Charge (approx.)" textFill="#d1d1d1" visible="false" wrapText="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="254.0" prefWidth="280.0">
+         <children>
+            <JFXButton onAction="#myAccInfo" prefHeight="60.0" prefWidth="279.0" ripplerFill="#b988ff" style="-fx-background-color: #1e183a;" text="MY ACCOUNT INFORMATION" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="rqustGame" layoutY="70.0" onAction="#requestGame" prefHeight="60.0" prefWidth="279.0" ripplerFill="#b988ff" style="-fx-background-color: #1e183a;" text="REQUEST A NEW GAME" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="58.0" prefWidth="280.0">
+         <children>
+            <JFXButton layoutY="77.0" onAction="#logout" prefHeight="60.0" prefWidth="279.0" ripplerFill="#ff666d" style="-fx-background-color: #be1f27;" text="LOG OUT" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>

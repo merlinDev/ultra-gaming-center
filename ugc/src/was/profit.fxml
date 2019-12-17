@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="1001.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="was.HomeController">
+   <children>
+      <AnchorPane layoutX="346.0" layoutY="128.0" prefHeight="622.0" prefWidth="925.0" style="-fx-background-color: #222;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="44.0" layoutY="14.0" prefHeight="446.0" prefWidth="649.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="16.0" layoutY="38.0" text="profit Details" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="expenses" layoutX="13.0" layoutY="159.0" prefHeight="229.0" prefWidth="212.0">
+                    <columns>
+                      <TableColumn fx:id="expenseDate" prefWidth="85.0" text="Date" />
+                      <TableColumn fx:id="grnNo" prefWidth="63.0" text="GRN NO" />
+                        <TableColumn fx:id="expensePrice" prefWidth="63.0" text="Price" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="income" layoutX="450.0" layoutY="159.0" prefHeight="229.0" prefWidth="181.0">
+                     <columns>
+                        <TableColumn fx:id="sellingDate" prefWidth="97.0" text="Selling Date" />
+                        <TableColumn fx:id="gameinv" prefWidth="83.0" text="Selling price" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="431.0" layoutY="37.0" text="To" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="164.0" layoutY="37.0" text="From" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="gamingincome" layoutX="247.0" layoutY="159.0" prefHeight="229.0" prefWidth="187.0">
+                    <columns>
+                        <TableColumn fx:id="incomeDate" prefWidth="70.0" text="Date" />
+                        <TableColumn fx:id="incomePrice" prefWidth="120.0" text="Gaming INV Price" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="450.0" layoutY="120.0" text="Game Selling Income" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="267.0" layoutY="121.0" text="Gaming Income" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="46.0" layoutY="120.0" text="GRN Details" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="endDate" layoutX="470.0" layoutY="30.0" style="-fx-background-color: white;" />
+                  <JFXDatePicker fx:id="startDate" layoutX="231.0" layoutY="28.0" style="-fx-background-color: white;" />
+                  <JFXButton fx:id="search" layoutX="16.0" layoutY="407.0" onMouseClicked="#searchLoader" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: gold;" text="Search" />
+                  <JFXButton fx:id="reload" layoutX="132.0" layoutY="407.0" onMouseClicked="#reload" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #dc103c;" text="Reload" />
+                  <JFXButton fx:id="lastYear" layoutX="529.0" layoutY="407.0" onMouseClicked="#yearCal" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: gold;" text="Last Year chart" />
+                  <JFXButton fx:id="lastMonth" layoutX="394.0" layoutY="407.0" onMouseClicked="#monthCal" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: gold;" text="Last month chart" />
+                  <JFXButton fx:id="lastDay" layoutX="235.0" layoutY="407.0" onMouseClicked="#dayCal" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: gold;" text="Last Day chart" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="712.0" layoutY="14.0" prefHeight="446.0" prefWidth="254.0" style="-fx-background-color: black;">
+               <children>
+                  <Label layoutX="90.0" layoutY="41.0" text="profit" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="339.0" text="GRN" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="grnTotal" editable="false" focusColor="#009688" labelFloat="true" layoutX="112.0" layoutY="340.0" promptText="Total Buying Price" style="-fx-text-fill: fff;" />
+                  <JFXTextField fx:id="gameinvoiceTotal" editable="false" focusColor="#009688" labelFloat="true" layoutX="9.0" layoutY="136.0" promptText="Total  Game Selling price" style="-fx-text-fill: fff;" />
+                  <JFXTextField fx:id="invoiceTotal" editable="false" focusColor="#009688" labelFloat="true" layoutX="115.0" layoutY="266.0" promptText="Invoice Total" style="-fx-text-fill: fff;" />
+                  <JFXTextField fx:id="profit" editable="false" focusColor="#009688" labelFloat="true" layoutX="116.0" layoutY="403.0" promptText="Profit" style="-fx-text-fill: fff;" />
+                  <Label layoutX="11.0" layoutY="78.0" text="Invoices" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="gamingTotal" editable="false" focusColor="#009688" labelFloat="true" layoutX="7.0" layoutY="197.0" promptText="Gaming Invoice Total" style="-fx-text-fill: fff;" />
+                  <Label layoutX="12.0" layoutY="398.0" text="Profit" textFill="#009688">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

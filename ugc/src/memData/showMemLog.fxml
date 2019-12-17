@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="366.0" prefWidth="761.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.ShowMemLogController">
+   <children>
+      <TableView fx:id="logTable" layoutX="21.0" layoutY="64.0" onMouseClicked="#showGamePlay" prefHeight="287.0" prefWidth="207.0">
+        <columns>
+          <TableColumn fx:id="times" prefWidth="206.0" text="logged in times" />
+        </columns>
+      </TableView>
+      <TableView fx:id="timeTable" layoutX="243.0" layoutY="64.0" prefHeight="287.0" prefWidth="501.0">
+        <columns>
+          <TableColumn fx:id="game" prefWidth="136.0" text="game played" />
+          <TableColumn fx:id="duration" prefWidth="226.0" text="duration" />
+            <TableColumn fx:id="start" prefWidth="138.0" text="started at" />
+        </columns>
+      </TableView>
+      <JFXDatePicker fx:id="datePick" layoutX="21.0" layoutY="23.0" onAction="#setDate" prefHeight="25.0" prefWidth="207.0" promptText="date" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>

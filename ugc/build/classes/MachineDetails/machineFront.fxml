@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="1012.0" style="-fx-background-color: #43A047;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MachineDetails.MachineFrontController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="13.0" prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="searchMachine" labelFloat="true" layoutX="33.0" layoutY="39.0" onAction="#searchpc" prefHeight="33.0" prefWidth="605.0" promptText="Search Computer" style="-fx-text-fill: #fff;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="shutDownAll" buttonType="RAISED" layoutX="779.0" layoutY="476.0" onAction="#shutDownAll" prefHeight="40.0" prefWidth="172.0" ripplerFill="#ebe7e7" style="-fx-background-color: #42bff4;" text="Shut Down All">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="machineDetails" layoutX="31.0" layoutY="101.0" onMouseClicked="#mouse" prefHeight="352.0" prefWidth="918.0">
+              <columns>
+                <TableColumn fx:id="machineNo" prefWidth="119.0" resizable="false" text="Machine ID" />
+                  <TableColumn fx:id="ipAddress" prefWidth="75.0" text="IP Address" />
+                  <TableColumn fx:id="machineType" prefWidth="190.0" text="Machine Type" />
+                <TableColumn fx:id="machineName" prefWidth="190.0" resizable="false" text="Machine Name" />
+                  <TableColumn fx:id="avail" minWidth="0.0" prefWidth="150.0" resizable="false" text="Availability" />
+                  <TableColumn fx:id="state" prefWidth="164.0" resizable="false" text="Current State" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="358.0" layoutY="476.0" onAction="#refreshTable" prefHeight="40.0" prefWidth="119.0" style="-fx-background-color: #d8f497;" text="Refresh">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="allGame" layoutX="188.0" layoutY="476.0" onAction="#loadGames" prefHeight="40.0" prefWidth="159.0" style="-fx-background-color: #d8f497;" text="Load All Games">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="viewMachine" buttonType="RAISED" layoutX="31.0" layoutY="476.0" onAction="#viewAddMachines" prefHeight="40.0" prefWidth="144.0" style="-fx-background-color: #d8f497;" text="Add Machines">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

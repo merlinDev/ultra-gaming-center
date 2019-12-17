@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="394.0" prefWidth="748.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.OverTimeTableController">
+   <children>
+      <TableView fx:id="table" layoutY="58.0" prefHeight="337.0" prefWidth="748.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="170.0" text="id" />
+          <TableColumn fx:id="duration" prefWidth="197.0" text="duration" />
+            <TableColumn fx:id="charge" prefWidth="232.0" text="charge" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="edit" mnemonicParsing="false" onAction="#goEdit" text="Edit" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="search" layoutX="487.0" layoutY="14.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="247.0" promptText="Search" style="-fx-text-fill: white;" />
+   </children>
+</AnchorPane>

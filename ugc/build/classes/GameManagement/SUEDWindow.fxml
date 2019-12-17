@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameManagement.SUEDWindowController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="14.0" onMouseClicked="#clear" prefHeight="479.0" prefWidth="307.0" style="-fx-background-color: black;">
+         <children>
+            <JFXButton fx:id="Disable" layoutX="81.0" layoutY="339.0" onAction="#Disable" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #dc103c;" text="Deactive">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="upb" layoutX="81.0" layoutY="295.0" onAction="#update" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #2ECC71;" text="Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="Search" focusColor="#009688" labelFloat="true" layoutX="21.0" layoutY="43.0" onKeyReleased="#Search" prefHeight="28.0" prefWidth="266.0" promptText="Search Here..." style="-fx-text-fill: white;" unFocusColor="#fcfbff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <ListView fx:id="listId" layoutX="8.0" layoutY="91.0" onMouseClicked="#Table" prefHeight="92.0" prefWidth="293.0" style="-fx-text-fill: white;" />
+            <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="204.0" onAction="#Add" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: gold;" text="Add New Game">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="386.0" onAction="#Activate" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #57ECB6;" text="Activate">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <MenuButton fx:id="sortby" layoutX="204.0" layoutY="45.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" style="-fx-background-color: gold;" text="Sort By">
+              <items>
+                <MenuItem fx:id="namefortable" mnemonicParsing="false" onAction="#ToNormalWindow" text="Game Name" />
+                <MenuItem mnemonicParsing="false" onAction="#ToTableWindow" text="Machine" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </MenuButton>
+            <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="251.0" onAction="#AddtoMachineGames" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #3193d8;" text="Add to Machine">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="81.0" layoutY="429.0" onAction="#setPath" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: #55EAB6;" text="Set Path">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelAvailability" layoutX="337.0" layoutY="14.0" prefHeight="479.0" prefWidth="650.0" style="-fx-background-color: #263236;">
+         <children>
+            <TableView fx:id="table" prefHeight="279.0" prefWidth="616.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="100.0">
+              <columns>
+                <TableColumn fx:id="MachineNO" prefWidth="96.0" text="Machine NO" />
+                <TableColumn fx:id="Availability" prefWidth="170.0" text="Availability" />
+                  <TableColumn fx:id="inuse" prefWidth="186.0" text="In use" />
+                  <TableColumn fx:id="type" prefWidth="162.0" text="type" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="background" layoutX="337.0" layoutY="14.0" onMouseClicked="#lol" prefHeight="479.0" prefWidth="650.0" style="-fx-background-color: black;">
+         <children>
+            <JFXTextField fx:id="name" focusColor="#48d5f2" labelFloat="true" layoutX="296.0" layoutY="76.0" prefHeight="28.0" prefWidth="328.0" promptText="Name" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="description" focusColor="#48d5f2" labelFloat="true" layoutX="302.0" layoutY="171.0" prefHeight="124.0" prefWidth="328.0" promptText="Description" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextArea>
+            <JFXTextField fx:id="gmeid" editable="false" focusColor="#48d5f2" labelFloat="true" layoutX="22.0" layoutY="76.0" prefHeight="28.0" prefWidth="153.0" promptText="Game Id" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="qty" editable="false" focusColor="#48d5f2" labelFloat="true" layoutX="460.0" layoutY="363.0" prefHeight="28.0" prefWidth="170.0" promptText="Stock Qty" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="typegame" editable="false" focusColor="#48d5f2" labelFloat="true" layoutX="22.0" layoutY="198.0" prefHeight="28.0" prefWidth="198.0" promptText="Type" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXCheckBox fx:id="play" checkedColor="#efe93e" layoutX="22.0" layoutY="275.0" onAction="#playCheckbox" text="Play" textFill="WHITE" unCheckedColor="#70f2e7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="sell" checkedColor="#efe93e" layoutX="136.0" layoutY="275.0" onAction="#sellcheckbox" text="Sell" textFill="WHITE" unCheckedColor="#70f2e7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXTextField fx:id="EditImageURL" focusColor="#48d5f2" labelFloat="true" layoutX="22.0" layoutY="365.0" prefHeight="25.0" prefWidth="342.0" promptText="Edit Image URL" style="-fx-text-fill: white;" unFocusColor="#2cdd8a">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXCheckBox fx:id="editimageurlCB" checkedColor="#e47011" layoutX="166.0" layoutY="402.0" onAction="#EidtImageURL" prefHeight="17.0" prefWidth="198.0" text="*Edit Image URL" textFill="WHITE" unCheckedColor="#cbd333">
+               <font>
+                  <Font name="System Bold" size="12.5" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="EditAll" checkedColor="#e1491b" layoutX="470.0" layoutY="446.0" onAction="#EditAll" prefHeight="19.0" prefWidth="170.0" text="EDIT Game Details" textFill="#d7caca" unCheckedColor="#e4ca38">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton layoutX="323.0" layoutY="438.0" onMouseClicked="#clearFields" prefHeight="30.0" prefWidth="93.0" style="-fx-background-color: #2de555;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

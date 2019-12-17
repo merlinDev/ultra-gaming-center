@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="570.0" prefWidth="526.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.Stock_DetailsController">
+   <children>
+      <Label layoutX="16.0" layoutY="33.0" prefHeight="20.0" prefWidth="89.0" text="GRN NO     :-" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="grnno" layoutX="111.0" layoutY="35.0" prefHeight="20.0" prefWidth="123.0" text="the number" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="87.0" prefHeight="20.0" prefWidth="89.0" text="DATE           :-" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="60.0" prefHeight="20.0" prefWidth="89.0" text="PRICE          :-" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="grnprice" layoutX="111.0" layoutY="60.0" prefHeight="20.0" prefWidth="123.0" text="the number" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="grndate" layoutX="111.0" layoutY="87.0" prefHeight="20.0" prefWidth="123.0" text="the numberfcfgccfgcfgghvy" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="115.0" prefHeight="20.0" prefWidth="89.0" text="SUPPLIER     :-" textFill="#f5f3f3">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="supplier" alignment="TOP_LEFT" layoutX="110.0" layoutY="114.0" prefHeight="74.0" prefWidth="123.0" text="the number" textFill="#f5f3f3" wrapText="true">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="piechart" labelsVisible="false" layoutX="31.0" layoutY="144.0" prefHeight="357.0" prefWidth="466.0" style="-fx-text-fill: white;" />
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="61.0" layoutY="524.0" onAction="#saveA" prefHeight="32.0" prefWidth="89.0" style="-fx-background-color: gray;" text="Save" textFill="#f5f2f2" />
+   </children>
+</AnchorPane>

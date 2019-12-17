@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="510.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="MachineDetails.MachineTypeController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="491.0" text="Machine Details" textFill="#379333">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table2" layoutX="25.0" layoutY="81.0" prefHeight="232.0" prefWidth="468.0">
+        <columns>
+          <TableColumn fx:id="machineType" prefWidth="175.0" resizable="false" text="Machine Type" />
+          <TableColumn fx:id="machineCount" prefWidth="148.0" resizable="false" text="Machine Count" />
+            <TableColumn fx:id="availCount" prefWidth="144.0" resizable="false" text="Available Count" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="391.0" layoutY="337.0" onAction="#close" prefHeight="29.0" prefWidth="84.0" style="-fx-background-color: lightgreen;" text="CANCEL">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

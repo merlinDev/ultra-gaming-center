@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="506.0" prefWidth="280.0" style="-fx-background-color: #38454e;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalsoftwareproject.SidePanelContentController">
+   <children>
+      <ImageView fx:id="sideImage" fitHeight="146.0" fitWidth="280.0" pickOnBounds="true" />
+      <JFXButton onAction="#setHome" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setGameManagement" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="GAME MANAGEMENT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setGameRequests" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="GAME REQUESTS" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+         <JFXButton layoutX="10.0" layoutY="123.0" onAction="#setToken" prefHeight="67.0" prefWidth="315.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="GENERATE TOKEN" textFill="WHITE"><font>
+            <Font name="Roboto Light" size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="10.0" layoutY="197.0" onAction="#setGuestInvoice" prefHeight="68.0" prefWidth="283.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="GUEST INVOICE" textFill="WHITE"><font>
+            <Font name="Roboto Light" size="13.0" />
+         </font></JFXButton>
+      <JFXButton onAction="#setProfit" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="LOSS &amp; PROFIT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setAddMachine" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="MACHINE MANAGEMENT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setMemberCheckout" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="MEMBER CHECKOUT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setMemberManagement" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="MEMBER MANAGEMENT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setpos" prefHeight="65.0" prefWidth="283.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="POS" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font></JFXButton>
+      <JFXButton onAction="#setPromotions" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="PROMOTIONS" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setSettings" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="SETTINGS" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setStock" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="STOCK MANAGEMENT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton onAction="#setSupplier" prefHeight="70.0" prefWidth="285.0" ripplerFill="#ddffeb" style="-fx-background-color: #38454e;" text="SUPPLIER MANAGEMENT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Light" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

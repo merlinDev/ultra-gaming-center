@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="478.0" prefWidth="755.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.GamePathController">
+   <children>
+      <JFXTextField fx:id="gameID" editable="false" labelFloat="true" layoutX="19.0" layoutY="50.0" prefHeight="25.0" prefWidth="106.0" promptText="Game ID" style="-fx-text-fill: white;" />
+      <JFXTextField fx:id="gameName" labelFloat="true" layoutX="67.0" layoutY="140.0" prefHeight="25.0" prefWidth="244.0" promptText="Game Name" style="-fx-text-fill: white;" />
+      <JFXComboBox fx:id="gamCat" layoutX="67.0" layoutY="195.0" prefHeight="25.0" prefWidth="135.0" promptText="Category" />
+      <JFXComboBox fx:id="setRatings" layoutX="67.0" layoutY="357.0" prefHeight="25.0" prefWidth="135.0" promptText="Ratings" />
+      <JFXButton fx:id="addGame" buttonType="RAISED" layoutX="561.0" layoutY="415.0" onAction="#addGame" prefHeight="33.0" prefWidth="175.0" ripplerFill="WHITE" style="-fx-background-color: #3498db;" text="Add Game">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="gamePath" labelFloat="true" layoutX="175.0" layoutY="50.0" prefHeight="25.0" prefWidth="561.0" promptText="Game Path" style="-fx-text-fill: white;" />
+      <JFXButton fx:id="browse" buttonType="RAISED" layoutX="643.0" layoutY="90.0" onAction="#setPath" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: green;" text="Browse" textFill="WHITE" />
+      <JFXTextArea fx:id="desc" layoutX="472.0" layoutY="161.0" prefHeight="222.0" prefWidth="259.0" promptText="Description" style="-fx-text-fill: white;" />
+      <JFXCheckBox fx:id="sell" layoutX="179.0" layoutY="94.0" onAction="#sellPlay" text="sell" textFill="WHITE" />
+      <JFXCheckBox fx:id="play" layoutX="247.0" layoutY="94.0" onAction="#sellPlay" text="play" textFill="WHITE" />
+      <JFXTextField fx:id="iconURL" labelFloat="true" layoutX="67.0" layoutY="248.0" prefHeight="25.0" prefWidth="370.0" promptText="icon URL" style="-fx-text-fill: white;" />
+      <JFXTextField fx:id="backgroundURL" labelFloat="true" layoutX="66.0" layoutY="307.0" prefHeight="25.0" prefWidth="370.0" promptText="background URL" style="-fx-text-fill: white;" />
+   </children>
+</AnchorPane>

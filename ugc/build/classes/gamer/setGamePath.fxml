@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="601.0" style="-fx-background-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="gamer.SetGamePathController">
+   <children>
+      <TableView fx:id="table" layoutX="10.0" layoutY="86.0" prefHeight="250.0" prefWidth="581.0">
+        <columns>
+          <TableColumn fx:id="game" prefWidth="189.0" text="game" />
+          <TableColumn fx:id="path" prefWidth="424.0" text="path" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="setGamePath" mnemonicParsing="false" onAction="#setGamePath" text="Edit path" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="search" layoutX="363.0" layoutY="48.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="224.0" promptText="Search" style="-fx-text-fill: white;" />
+   </children>
+</AnchorPane>

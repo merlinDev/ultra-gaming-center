@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="174.0" prefWidth="341.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.SetTempPassController">
+   <children>
+      <JFXPasswordField fx:id="pass" layoutX="14.0" layoutY="30.0" prefHeight="25.0" prefWidth="309.0" promptText="temp. password" style="-fx-text-fill: white;" />
+      <JFXPasswordField fx:id="conPass" layoutX="16.0" layoutY="89.0" prefHeight="25.0" prefWidth="309.0" promptText="confirm password" style="-fx-text-fill: white;" />
+      <JFXButton fx:id="done" buttonType="RAISED" layoutX="226.0" layoutY="132.0" onAction="#done" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #222;" text="done" textFill="WHITE" />
+   </children>
+</AnchorPane>

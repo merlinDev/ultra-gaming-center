@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: #43A047;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.StorkController">
+   <children>
+      <AnchorPane layoutX="338.0" layoutY="16.0" prefHeight="482.0" prefWidth="642.0" style="-fx-background-color: #263236;" AnchorPane.rightAnchor="16.0">
+         <children>
+            <JFXTextField fx:id="barcode" focusColor="#009688" labelFloat="true" layoutX="34.0" layoutY="55.0" onKeyPressed="#valibar" onKeyReleased="#searchbybar" prefHeight="28.0" prefWidth="140.0" promptText="Barcode" style="-fx-text-fill: white;" unFocusColor="#fcfbff">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="update" buttonType="RAISED" layoutX="536.0" layoutY="107.0" onMouseClicked="#upd" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: #58aff9;" text="update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="524.0" layoutY="14.0" style="-fx-text-fill: white;" text=" Strock  Details" textFill="#009688">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="qty1" focusColor="#009688" labelFloat="true" layoutX="34.0" layoutY="108.0" onAction="#qty1A" onKeyPressed="#valigq" prefHeight="27.0" prefWidth="109.0" promptText="QTY" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="storktable" layoutX="27.0" layoutY="177.0" onMouseClicked="#toFields" prefHeight="228.0" prefWidth="592.0" style="-fx-background-color: black;">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="ItemId" />
+                  <TableColumn fx:id="namec" prefWidth="127.0" text="Game" />
+                  <TableColumn fx:id="bpricec" prefWidth="109.0" text="Type" />
+                  <TableColumn fx:id="typec" prefWidth="105.0" text="Storage Medium" />
+                  <TableColumn fx:id="qtyc" prefWidth="69.0" text="Qty" />
+                  <TableColumn fx:id="sprice" prefWidth="106.0" text="Selling Price" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="gameprice1" focusColor="#009688" labelFloat="true" layoutX="175.0" layoutY="107.0" onKeyPressed="#valigsp" prefHeight="27.0" prefWidth="154.0" promptText="Selling Price" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="gamescomb1" focusColor="#009688" layoutX="359.0" layoutY="109.0" onAction="#comboOnAct" onMouseEntered="#com" prefHeight="25.0" prefWidth="154.0" style="-fx-font-colour: red;" stylesheets="@combo.css" unFocusColor="#e8e3e3" />
+            <JFXButton fx:id="loadall" buttonType="RAISED" layoutX="473.0" layoutY="421.0" onMouseClicked="#losdallb" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #16d0c3;" text="Load All" />
+            <JFXButton fx:id="printall" buttonType="RAISED" layoutX="341.0" layoutY="421.0" onAction="#printsto" onMouseClicked="#printallb" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #2ECC71;" text="Print All" />
+            <Label layoutX="363.0" layoutY="92.0" prefHeight="17.0" prefWidth="91.0" text="Storage Medium" textFill="#009688" />
+            <JFXTextField fx:id="gamescomb" editable="false" focusColor="#009688" labelFloat="true" layoutX="192.0" layoutY="55.0" onKeyPressed="#valigsp" prefHeight="27.0" prefWidth="154.0" promptText="Game" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="type1" editable="false" focusColor="#009688" labelFloat="true" layoutX="368.0" layoutY="54.0" onKeyPressed="#valigsp" prefHeight="27.0" prefWidth="154.0" promptText="Type" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Italic" size="13.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="482.0" prefWidth="325.0" style="-fx-background-color: #263236;">
+         <children>
+            <Label layoutX="224.0" layoutY="4.0" style="-fx-text-fill: white;" text="Add Strock " textFill="#009688">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="searchlist" layoutX="23.0" layoutY="54.0" onMouseClicked="#dddd" prefHeight="79.0" prefWidth="187.0" style="-fx-background-color: #263236;" />
+            <JFXTextField fx:id="game" focusColor="#009688" layoutX="23.0" layoutY="29.0" onKeyPressed="#sea" onKeyReleased="#searchty" prefHeight="25.0" prefWidth="187.0" promptText="GRN Item" style="-fx-text-fill: white;" />
+            <JFXTextField fx:id="buyp" editable="false" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="346.0" onKeyReleased="#valibp" prefHeight="25.0" prefWidth="187.0" promptText="Buying Price" style="-fx-text-fill: white;" />
+            <JFXTextField fx:id="sell" focusColor="#009688" labelFloat="true" layoutX="22.0" layoutY="385.0" onKeyPressed="#valisp" prefHeight="25.0" prefWidth="187.0" promptText="Selling Price" style="-fx-text-fill: white;" />
+            <JFXButton fx:id="save" layoutX="50.0" layoutY="430.0" onAction="#Savestrock" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #2ECC71;" text="Save" />
+            <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="161.0" layoutY="430.0" onMouseClicked="#cleb" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: red;" text="Clear" />
+            <JFXTextField fx:id="grnno2" editable="false" focusColor="#009688" labelFloat="true" layoutX="21.0" layoutY="147.0" onAction="#sebuy" onKeyReleased="#valigrnno" prefHeight="25.0" prefWidth="168.0" promptText="Grn NO" style="-fx-text-fill: white;" />
+            <JFXComboBox fx:id="type" focusColor="#009688" layoutX="24.0" layoutY="257.0" prefHeight="25.0" prefWidth="168.0" stylesheets="@combo.css" />
+            <JFXTextField fx:id="qty" focusColor="#009688" labelFloat="true" layoutX="25.0" layoutY="304.0" onAction="#qtyA" onKeyPressed="#valiqty" prefHeight="25.0" prefWidth="187.0" promptText="QTY" style="-fx-text-fill: white;" />
+            <JFXButton fx:id="addtype" buttonType="RAISED" layoutX="211.0" layoutY="258.0" onMouseClicked="#addty" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #58aff9;" text="Add Type">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="24.0" layoutY="239.0" prefHeight="17.0" prefWidth="52.0" text="Type" textFill="#009688" />
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="games" editable="false" focusColor="#009688" labelFloat="true" layoutX="39.0" layoutY="212.0" onAction="#sebuy" onKeyReleased="#valigrnno" prefHeight="25.0" prefWidth="168.0" promptText="Game" style="-fx-text-fill: white;" />
+   </children>
+</AnchorPane>

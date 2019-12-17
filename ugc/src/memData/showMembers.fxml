@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="460.0" prefWidth="978.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.ShowMembersController">
+   <children>
+      <AnchorPane fx:id="tablePane" layoutX="216.0" layoutY="51.0" prefHeight="394.0" prefWidth="748.0" style="-fx-background-color: black;" />
+      <JFXButton fx:id="members" buttonType="RAISED" layoutX="31.0" layoutY="58.0" onAction="#members" prefHeight="45.0" prefWidth="165.0" ripplerFill="WHITE" style="-fx-background-color: #00FF00;" text="Members" />
+      <JFXButton fx:id="memberType" buttonType="RAISED" layoutX="31.0" layoutY="132.0" onAction="#memberType" prefHeight="45.0" prefWidth="165.0" ripplerFill="WHITE" style="-fx-background-color: #00FF00;" text="Membership Types" />
+      <JFXButton fx:id="overtime" buttonType="RAISED" layoutX="31.0" layoutY="208.0" onAction="#overtime" prefHeight="45.0" prefWidth="165.0" ripplerFill="WHITE" style="-fx-background-color: #00FF00;" text="Charges" />
+      <Label fx:id="type" layoutX="216.0" layoutY="22.0" prefHeight="17.0" prefWidth="181.0" textFill="#f8f8f8">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

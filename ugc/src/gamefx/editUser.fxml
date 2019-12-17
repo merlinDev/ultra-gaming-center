@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.EditUserController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="487.0" prefWidth="416.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="75.0" layoutY="14.0" prefHeight="27.0" prefWidth="116.0" text="User Details" textFill="#f2ee0a">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="MType" editable="false" focusColor="#0cdaa7" labelFloat="true" layoutX="35.0" layoutY="63.0" prefHeight="28.0" prefWidth="220.0" promptText="Memebership Type" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Pprice" editable="false" focusColor="#0cdaa7" labelFloat="true" layoutX="35.0" layoutY="119.0" prefHeight="25.0" prefWidth="220.0" promptText="Package Price" style="-fx-text-fill: white;" unFocusColor="#fffefe">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <AnchorPane fx:id="progress" layoutX="8.0" layoutY="173.0" prefHeight="276.0" prefWidth="390.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="458.0" layoutY="13.0" prefHeight="487.0" prefWidth="538.0" style="-fx-background-color: black;">
+         <children>
+            <JFXTextField fx:id="name" focusColor="#0cdaa7" labelFloat="true" layoutX="279.0" layoutY="76.0" prefHeight="28.0" prefWidth="174.0" promptText="Name" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Uname" editable="false" focusColor="#0cdaa7" labelFloat="true" layoutX="275.0" layoutY="149.0" prefHeight="28.0" prefWidth="186.0" promptText="User Name" style="-fx-text-fill: White;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="nic" editable="false" focusColor="#0cdaa7" labelFloat="true" layoutX="49.0" layoutY="75.0" prefHeight="28.0" prefWidth="186.0" promptText="NIC" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Email" focusColor="#0cdaa7" labelFloat="true" layoutX="49.0" layoutY="232.0" prefHeight="28.0" prefWidth="186.0" promptText="E-mail" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="phneNo" focusColor="#0cdaa7" labelFloat="true" layoutX="275.0" layoutY="233.0" prefHeight="28.0" prefWidth="186.0" promptText="Phone No:" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="165.0" layoutY="388.0" onAction="#Save" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #26b3e2;" text="Save">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="285.0" layoutY="388.0" onAction="#Cancel" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #e82048;" text="Cancel">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="Gname" focusColor="#0cdaa7" labelFloat="true" layoutX="49.0" layoutY="148.0" prefHeight="28.0" prefWidth="186.0" promptText="Gamer Name" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="NewPassword" focusColor="#83a0f8" labelFloat="true" layoutX="49.0" layoutY="317.0" onKeyTyped="#CountCharacters" prefHeight="28.0" prefWidth="186.0" promptText="Enter New Password" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="ConfirmPassword" focusColor="#fc5a5a" labelFloat="true" layoutX="275.0" layoutY="318.0" onKeyReleased="#OnkeyReleased" prefHeight="28.0" prefWidth="186.0" promptText="Confirm Password" style="-fx-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <Label fx:id="MsgLabel" layoutX="53.0" layoutY="365.0" prefHeight="19.0" prefWidth="186.0" textFill="#f57474">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="ConfirmPasswordMsgLabel" layoutX="275.0" layoutY="365.0" prefHeight="19.0" prefWidth="186.0" textFill="#f57474">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

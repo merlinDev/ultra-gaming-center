@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MachineDetails.OldpromoController">
+   <children>
+      <TableView fx:id="promotabel" layoutX="29.0" layoutY="76.0" prefHeight="330.0" prefWidth="907.0">
+        <columns>
+            <TableColumn fx:id="promoid" editable="false" prefWidth="89.0" text="Promo ID" />
+            <TableColumn fx:id="startDate" editable="false" prefWidth="169.0" text="Start Date" />
+            <TableColumn fx:id="endDate" editable="false" prefWidth="196.0" text="End Date" />
+          <TableColumn fx:id="promoCode" editable="false" prefWidth="249.0" text="Promo Code" />
+          <TableColumn fx:id="discountPrice" editable="false" prefWidth="203.0" text="Discount Price" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="viewUsers" buttonType="RAISED" layoutX="793.0" layoutY="441.0" onAction="#view" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: #42cbf4;" text="View Promo Users" />
+      <JFXButton fx:id="refresh" layoutX="636.0" layoutY="441.0" onAction="#refreshAll" prefHeight="37.0" prefWidth="143.0" style="-fx-background-color: #42cbf4;" text="Refresh" />
+      <JFXTextField fx:id="search" focusColor="#fafbff" labelFloat="true" layoutX="29.0" layoutY="32.0" onAction="#searchPromo" prefHeight="25.0" prefWidth="577.0" promptText="Search" unFocusColor="#fcfafa">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

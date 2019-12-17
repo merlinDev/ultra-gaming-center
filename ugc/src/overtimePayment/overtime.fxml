@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="378.0" prefWidth="512.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="overtimePayment.OvertimeController">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="73.0" prefHeight="290.0" prefWidth="476.0">
+        <columns>
+          <TableColumn fx:id="date" minWidth="0.0" prefWidth="184.0" text="date" />
+          <TableColumn fx:id="overtime" prefWidth="291.0" text="overtime payment" />
+        </columns>
+      </TableView>
+      <JFXDatePicker fx:id="from" layoutX="57.0" layoutY="33.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #fff;" />
+      <JFXDatePicker fx:id="to" layoutX="245.0" layoutY="33.0" prefHeight="25.0" prefWidth="128.0" style="-fx-background-color: #fff;" />
+      <Label layoutX="18.0" layoutY="37.0" text="from :" textFill="WHITE" />
+      <Label layoutX="213.0" layoutY="37.0" text="to :" textFill="WHITE" />
+      <JFXButton fx:id="search" layoutX="404.0" layoutY="33.0" onAction="#search" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: green;" text="search" textFill="WHITE" />
+   </children>
+</AnchorPane>

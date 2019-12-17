@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="466.0" prefWidth="755.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameManagement.AddnewGame2Controller">
+   <children>
+      <JFXTextField fx:id="gameid" labelFloat="true" layoutX="14.0" layoutY="34.0" onMouseClicked="#image3" prefHeight="25.0" prefWidth="160.0" promptText="Game ID:" style="-fx-text-fill: white;">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="gamename" labelFloat="true" layoutX="216.0" layoutY="36.0" onKeyReleased="#SearchGameName" prefHeight="25.0" prefWidth="473.0" promptText="Game Name" style="-fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="image" labelFloat="true" layoutX="216.0" layoutY="189.0" onKeyTyped="#imageView" onMouseClicked="#image" prefHeight="28.0" prefWidth="473.0" promptText="Image" style="-fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="633.0" layoutY="400.0" onAction="#Cancel" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #ea2b2b;" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="502.0" layoutY="400.0" onAction="#Save" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: Gold;" text="Save">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="sell" checkedColor="#4d74f5" layoutX="473.0" layoutY="83.0" onAction="#sellselected" text="sell" textFill="WHITE" unCheckedColor="#4bfa84">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="play" checkedColor="#4d74f5" layoutX="587.0" layoutY="83.0" onAction="#playonlyselected" text="Play" textFill="WHITE" unCheckedColor="#4bfa84">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXTextArea fx:id="descripiton" labelFloat="true" layoutX="216.0" layoutY="293.0" onMouseClicked="#image2" prefHeight="55.0" prefWidth="473.0" promptText="Description" style="-fx-text-fill: white;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXTextArea>
+      <JFXComboBox fx:id="gametype" layoutX="18.0" layoutY="203.0" onMouseClicked="#typeNameLoad" prefHeight="25.0" prefWidth="153.0" stylesheets="@../gamefx/combo.css" />
+      <JFXButton layoutX="368.0" layoutY="400.0" onAction="#AddnewType" prefHeight="25.0" prefWidth="113.0" style="-fx-background-color: #84a7e0;" text="Add Type">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="18.0" layoutY="164.0" prefHeight="25.0" prefWidth="74.0" text="Game Type" textFill="#d3d2d2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="gamelabel" layoutX="216.0" layoutY="75.0" prefHeight="17.0" prefWidth="243.0" textFill="#ff4444">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="listView" layoutX="214.0" layoutY="75.0" prefHeight="37.0" prefWidth="259.0" />
+   </children>
+</AnchorPane>

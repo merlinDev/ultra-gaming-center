@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="180.0" prefWidth="350.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.StoragetypeController">
+   <children>
+      <AnchorPane prefHeight="284.0" prefWidth="423.0" style="-fx-background-color: balck;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="type" focusColor="#009688" labelFloat="true" layoutX="52.0" layoutY="56.0" prefHeight="25.0" prefWidth="254.0" promptText="Type" style="-fx-text-fill: white;" />
+            <JFXButton fx:id="button" layoutX="82.0" layoutY="119.0" onMouseClicked="#save" prefHeight="25.0" prefWidth="164.0" style="-fx-background-color: #616A6B;" text="Save" textFill="#f8f5f5" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPanea" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MachineDetails.ViewMachineController">
+    <AnchorPane id="AnchorPane" layoutX="13.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="485.0" prefWidth="981.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+        <children>
+            <TableView fx:id="gameFront" layoutX="20.0" layoutY="73.0" onMouseClicked="#gameFrontMC" prefHeight="339.0" prefWidth="942.0">
+                <columns>
+                    <TableColumn fx:id="selectedCol" maxWidth="250.0" minWidth="20.0" prefWidth="45.0" resizable="false" text="#" />
+                    <TableColumn fx:id="machineIdCol" maxWidth="250.0" minWidth="20.0" prefWidth="100.0" text="Machine ID" />
+                    <TableColumn fx:id="userIdCol" maxWidth="250.0" minWidth="20.0" prefWidth="100.0" text="User ID" />
+                    <TableColumn fx:id="userTypeCol" maxWidth="250.0" minWidth="20.0" prefWidth="120.0" text="User Type" />
+                    <TableColumn fx:id="loginTimeCol" maxWidth="250.0" minWidth="20.0" prefWidth="150.0" text="Login Time" />
+                    <TableColumn fx:id="packageTimeCol" maxWidth="250.0" minWidth="20.0" prefWidth="200.0" text="Package Time" />
+                    <TableColumn fx:id="durationCol" maxWidth="250.0" minWidth="20.0" prefWidth="105.0" text="Duration" />
+                    <TableColumn fx:id="overTimeCol" maxWidth="250.0" minWidth="20.0" prefWidth="105.0" text="Over Time" />
+                </columns>
+                <contextMenu>
+                    <ContextMenu>
+                        <items>
+                            <MenuItem mnemonicParsing="false" onAction="#opencmd" text="Open Windows Command Processor" />
+                        </items>
+                    </ContextMenu>
+                </contextMenu>
+            </TableView>
+            <JFXButton layoutX="741.0" layoutY="434.0" onAction="#refreshTable" prefHeight="37.0" prefWidth="221.0" ripplerFill="WHITE" style="-fx-background-color: #00e0a0;" text="Reload Information">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </JFXButton>
+            <Label layoutX="42.0" layoutY="28.0" text="Inuse system status" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Label>
+            <JFXButton layoutX="229.0" layoutY="434.0" onAction="#logout" prefHeight="37.0" prefWidth="161.0" ripplerFill="WHITE" style="-fx-background-color: #e00000;" text="System Logout" textFill="WHITE">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </JFXButton>
+            <JFXButton layoutX="20.0" layoutY="434.0" onAction="#playWarning" prefHeight="37.0" prefWidth="192.0" ripplerFill="WHITE" style="-fx-background-color: #12e000;" text="Play Warning Sound">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </JFXButton>
+        </children>
+    </AnchorPane>
+</AnchorPane>

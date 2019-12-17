@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="394.0" prefWidth="748.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memData.MemTableController">
+   <children>
+      <TableView fx:id="memTable" layoutY="66.0" prefHeight="337.0" prefWidth="748.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="name" prefWidth="142.0" text="Name" />
+          <TableColumn fx:id="email" prefWidth="151.0" text="Email" />
+            <TableColumn fx:id="contact" prefWidth="106.0" text="Contact" />
+            <TableColumn fx:id="username" prefWidth="102.0" text="user name" />
+            <TableColumn fx:id="nic" prefWidth="168.0" text="NIC" />
+            <TableColumn fx:id="status" prefWidth="78.0" text="status" />
+        </columns>
+         <contextMenu>
+            <ContextMenu fx:id="contex">
+              <items>
+                  <MenuItem fx:id="overtimePay" mnemonicParsing="false" onAction="#overtimePayments" text="overtime payments" />
+                  <MenuItem fx:id="progress" mnemonicParsing="false" onAction="#showProgress" text="gaming progress" />
+                  <MenuItem fx:id="changeMembership" mnemonicParsing="false" onAction="#changeMembership" text="membership" />
+                  <MenuItem fx:id="showDetails" mnemonicParsing="false" onAction="#showDetails" text="show details" />
+                <MenuItem fx:id="deactivate" mnemonicParsing="false" onAction="#deactivateMember" text="deactivate this member" />
+                  <MenuItem fx:id="Activate" mnemonicParsing="false" onAction="#activateMember" text="Activate this Account" />
+                  <MenuItem fx:id="banMemer" mnemonicParsing="false" onAction="#banMember" text="Ban member" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+      <JFXTextField fx:id="search" layoutX="480.0" layoutY="27.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="245.0" promptText="search" style="-fx-text-fill: white;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameManagement.MoreController">
+   <children>
+      <TableView fx:id="table" layoutX="14.0" layoutY="117.0" prefHeight="200.0" prefWidth="574.0">
+        <columns>
+            <TableColumn fx:id="gmeids" prefWidth="123.0" text="Game Id" />
+          <TableColumn fx:id="status" prefWidth="259.0" text="Status" />
+          <TableColumn fx:id="game" prefWidth="261.0" text="Games" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton fx:id="button" layoutX="332.0" layoutY="345.0" onAction="#button" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: gold;" text="Activate" />
+      <JFXButton fx:id="cancel" buttonType="RAISED" layoutX="450.0" layoutY="345.0" onAction="#windowclose" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: red;" text="Cancel" />
+   </children>
+</AnchorPane>

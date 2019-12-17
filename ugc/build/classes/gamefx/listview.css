@@ -1,0 +1,19 @@
+.jfx-list-cell{
+    
+	-fx-background-color: rgba(255, 255, 255,1);
+        
+}
+.jfx-list-cell:selected{
+	-fx-background-color: green;
+}
+.jfx-list-cell.jfx-ripple{
+	-fx-rippler-fill: black;
+}
+.jfx-list-cell:hover{
+	-fx-background-color: greenyellow;
+}
+/*.jfx-list{
+    -fx-text-fill: rgba(255, 255, 255,1);
+	-fx-background-color: rgba(203, 244, 66,0);
+        
+}*/

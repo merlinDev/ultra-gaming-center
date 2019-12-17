@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="779.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.Show_ReturnController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="420.0" prefWidth="758.0" style="-fx-background-color: black;">
+         <children>
+            <JFXTextField fx:id="barcodetex" focusColor="#009688" layoutX="25.0" layoutY="52.0" onAction="#barcodetexA" onKeyPressed="#valibartex" onKeyReleased="#bartexkr" promptText="Barcode" style="-fx-text-fill: white;" />
+            <TableView fx:id="show_return" layoutX="12.0" layoutY="115.0" onMouseClicked="#show_returnclick" prefHeight="210.0" prefWidth="734.0">
+              <columns>
+                  <TableColumn fx:id="barcol" prefWidth="75.0" text="Barcode" />
+                <TableColumn fx:id="gamecol" prefWidth="106.0" text="Game" />
+                <TableColumn fx:id="suppcol" prefWidth="149.0" text="Supplier" />
+                  <TableColumn fx:id="qtycol" prefWidth="84.0" text="Qty" />
+                  <TableColumn fx:id="sataescol" prefWidth="132.0" text="States" />
+                  <TableColumn fx:id="senddcol" prefWidth="75.0" text="Send Date" />
+                  <TableColumn fx:id="resolvoeddcol" prefWidth="75.0" text="Resolved Date" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXButton fx:id="havetoreturn" layoutX="580.0" layoutY="358.0" onAction="#havetoreturnA" prefHeight="33.0" prefWidth="135.0" style="-fx-background-color: orange;" text="Send" textFill="#140000" />
+            <JFXButton fx:id="returned" buttonType="RAISED" layoutX="580.0" layoutY="358.0" onAction="#returnedA" prefHeight="33.0" prefWidth="135.0" style="-fx-background-color: green;" text="Resolved" textFill="#f5efef" />
+            <JFXTextField fx:id="supptex" focusColor="#009688" layoutX="182.0" layoutY="52.0" onAction="#supptexA" onKeyPressed="#valisupptex" onKeyReleased="#supptexkr" promptText="Supplier" style="-fx-text-fill: white;" />
+            <JFXTextField fx:id="gametex" focusColor="#009688" layoutX="334.0" layoutY="50.0" onAction="#gametexA" onKeyPressed="#valigamrtex" onKeyReleased="#gametexkr" promptText="Game" style="-fx-text-fill: white;" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

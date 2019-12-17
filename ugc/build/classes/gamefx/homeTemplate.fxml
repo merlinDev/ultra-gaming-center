@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="512.0" prefWidth="496.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.HomeTemplateController">
+   <children>
+      <AnchorPane layoutX="9.0" layoutY="11.0" prefHeight="484.0" prefWidth="476.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="addtable1" layoutX="11.0" layoutY="230.0" onMouseClicked="#sertofi" prefHeight="164.0" prefWidth="455.0">
+               <columns>
+                  <TableColumn fx:id="grnnoc" minWidth="1.0" prefWidth="34.0" sortType="DESCENDING" text="GRN NO" />
+                  <TableColumn fx:id="Suppliercol" prefWidth="75.0" text="Supplier" />
+                  <TableColumn fx:id="pricec" minWidth="0.0" text="PRICE" />
+                  <TableColumn fx:id="datec" prefWidth="864.0" text="DATE" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <JFXTextField fx:id="Search" focusColor="#009688" labelFloat="true" layoutX="19.0" layoutY="23.0" onKeyReleased="#ssss" onKeyTyped="#searchm" promptText="Search GRN Here..." style="-fx-text-fill: white;" unFocusColor="#fcfbff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="grnNo1" editable="false" focusColor="#009688" labelFloat="true" layoutX="19.0" layoutY="70.0" prefHeight="28.0" prefWidth="77.0" promptText="GRN No" style="-fx-text-fill: white;" unFocusColor="#fcfbff">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField id="price" fx:id="price1" editable="false" focusColor="#009688" labelFloat="true" layoutX="19.0" layoutY="114.0" onKeyReleased="#valippp" prefHeight="28.0" prefWidth="97.0" promptText="PRICE" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="Cancel1" buttonType="RAISED" layoutX="16.0" layoutY="440.0" onAction="#clear2" prefHeight="30.0" prefWidth="455.0" style="-fx-background-color: red;" text="Cear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="print1" buttonType="RAISED" layoutX="19.0" layoutY="401.0" onAction="#print1" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #9de00d;" text="Print">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="more" buttonType="RAISED" layoutX="331.0" layoutY="113.0" onMouseClicked="#details" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #58aff9;" text="More Details">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="printall" buttonType="RAISED" layoutX="173.0" layoutY="401.0" onAction="#printallA" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #9de00d;" text="Print All">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="loadAll" buttonType="RAISED" layoutX="326.0" layoutY="400.0" onAction="#loadAllA" prefHeight="30.0" prefWidth="139.0" style="-fx-background-color: #2ECC71;" text="Load All">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="serchgrndate" editable="false" focusColor="#009688" labelFloat="true" layoutX="140.0" layoutY="114.0" prefHeight="28.0" prefWidth="154.0" promptText="Date" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="Supplier" editable="false" focusColor="#009688" labelFloat="true" layoutX="138.0" layoutY="69.0" prefHeight="28.0" prefWidth="169.0" promptText="Supplier" style="-fx-text-fill: white;" unFocusColor="#e8e3e3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXDatePicker fx:id="stdate" defaultColor="#0a6f65" editable="false" layoutX="18.0" layoutY="164.0" style="-fx-background-color: #26d6c5;" />
+            <JFXDatePicker fx:id="enddate" defaultColor="#0a6f65" editable="false" layoutX="217.0" layoutY="164.0" style="-fx-background-color: #26d6c5;" />
+            <Label layoutX="195.0" layoutY="171.0" text="To" textFill="#f8f4f4" />
+            <JFXButton fx:id="searchbydate" buttonType="RAISED" layoutX="394.0" layoutY="165.0" onAction="#searchbydateA" prefHeight="28.0" prefWidth="71.0" style="-fx-background-color: #58aff9;" text="search">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

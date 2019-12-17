@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="logout" prefHeight="711.0" prefWidth="1390.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalsoftwareproject.AdminHomeController">
+   <children>
+      <AnchorPane fx:id="anchor2" layoutX="318.0" layoutY="109.0" prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: #43a047;" />
+      <AnchorPane layoutX="268.0" prefHeight="59.0" prefWidth="1123.0" style="-fx-background-color: #171717;">
+         <effect>
+            <DropShadow height="38.55" radius="9.1975" spread="0.78" width="0.24" />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="925.0" layoutY="20.0" onAction="#lougout" prefHeight="25.0" prefWidth="144.0" ripplerFill="#0fe0de" style="-fx-background-color: #0fe0de;" text="Logout" />
+            <ImageView fitHeight="67.0" fitWidth="186.0" layoutX="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="1052.0" layoutY="13.0" prefHeight="38.0" prefWidth="34.0" text=" " />
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="280.0" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="280.0" style="-fx-background-color: ;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="time" alignment="CENTER_RIGHT" layoutX="1208.0" layoutY="622.0" prefHeight="54.0" prefWidth="157.0" text="12: 58 PM" textFill="#cdc3c3" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1080.0" layoutY="657.0" prefHeight="54.0" prefWidth="285.0" text="Wednesday, November 20, 2017" textFill="#cdc3c3" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

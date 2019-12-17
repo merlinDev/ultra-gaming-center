@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="1010.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MachineDetails.PromotionsController">
+   <children>
+      <Label layoutX="14.0" layoutY="51.0" prefHeight="38.0" prefWidth="102.0" text="From :" textFill="#f8f4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="575.0" layoutY="56.0" prefHeight="38.0" prefWidth="102.0" text="To :" textFill="#f8f4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="140.0" prefHeight="31.0" prefWidth="158.0" text="Promotion To Top" textFill="#f5eded">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXDatePicker fx:id="startDate" layoutX="93.0" layoutY="56.0" promptText="Set Start Date" style="-fx-background-color: white;" />
+      <JFXDatePicker fx:id="enddate" layoutX="708.0" layoutY="61.0" promptText="Set End Date" style="-fx-background-color: white;" />
+      <JFXComboBox fx:id="topUser" focusColor="#f9fafc" layoutX="209.0" layoutY="143.0" onAction="#selectTop" prefHeight="25.0" prefWidth="111.0" promptText="0" style="-fx-text-fill: #fff;" unFocusColor="#f2f0f0" />
+      <JFXTextField fx:id="promocode" editable="false" focusColor="#f7f7f8" labelFloat="true" layoutX="575.0" layoutY="136.0" prefHeight="27.0" prefWidth="301.0" promptText="Promo Code" style="-fx-text-fill: #fff;" unFocusColor="#fcf9f9">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="DiscountPrice" labelFloat="true" layoutX="575.0" layoutY="217.0" onKeyTyped="#changeText" prefHeight="44.0" prefWidth="301.0" promptText="Discount Price" style="-fx-text-fill: #fff;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="description" layoutX="575.0" layoutY="290.0" prefHeight="114.0" prefWidth="301.0" promptText="Description" style="-fx-text-fill: #fff;" />
+      <TableView fx:id="selectMember" layoutX="16.0" layoutY="199.0" prefHeight="200.0" prefWidth="484.0">
+        <columns>
+          <TableColumn fx:id="userid" prefWidth="110.0" text="User ID" />
+          <TableColumn fx:id="name" prefWidth="205.0" text="Name" />
+            <TableColumn fx:id="gamerName" prefWidth="168.0" text="Gamer Name" />
+        </columns>
+      </TableView>
+      <Label layoutX="16.0" layoutY="446.0" prefHeight="31.0" prefWidth="117.0" text="Send Type" textFill="#f5efef">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="sms" layoutX="116.0" layoutY="453.0" prefHeight="17.0" prefWidth="102.0" selected="true" text="SMS" textFill="WHITE" />
+      <JFXCheckBox fx:id="email" layoutX="258.0" layoutY="453.0" prefHeight="17.0" prefWidth="102.0" text="Email" textFill="WHITE" />
+      <JFXButton fx:id="send" buttonType="RAISED" layoutX="479.0" layoutY="441.0" onAction="#sendAndSavePromo" prefHeight="44.0" prefWidth="102.0" style="-fx-background-color: #5c99f9;" text="Send" />
+      <JFXButton fx:id="clear" buttonType="RAISED" layoutX="613.0" layoutY="444.0" onAction="#clearFeild" prefHeight="38.0" prefWidth="102.0" style="-fx-background-color: #5c99f9;" text="Clear" />
+      <JFXButton fx:id="viewOld" buttonType="RAISED" layoutX="743.0" layoutY="444.0" onAction="#oldPromos" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #5c99f9;" text="View Old Promo" />
+   </children>
+</AnchorPane>

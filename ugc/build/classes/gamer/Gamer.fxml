@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="702.0" prefWidth="1489.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamer.GamerController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="110.0" prefHeight="582.0" prefWidth="1456.0" style="-fx-background-color: rgba(0, 0, 0, 0.5);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <ScrollPane fx:id="sco" layoutX="14.0" layoutY="70.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="502.0" prefWidth="1590.0" stylesheets="@scor.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="70.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ScrollPane>
+            <AnchorPane fx:id="Deatails" prefHeight="502.0" prefWidth="1423.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <ImageView fx:id="backimiage" fitHeight="502.0" fitWidth="1299.0" layoutX="7.0" layoutY="6.0" opacity="0.27" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane layoutX="35.0" layoutY="78.0" prefHeight="265.0" prefWidth="251.0" style="-fx-background-color: white;">
+                     <children>
+                        <ImageView fx:id="minimage" fitHeight="255.0" fitWidth="239.0" layoutX="7.0" layoutY="5.0" pickOnBounds="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="5.0">
+                           <image>
+                              <Image url="@59715-paladins_wallpaper.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="Detailsname" layoutX="35.0" layoutY="28.0" prefHeight="35.0" prefWidth="264.0" text="Name" textFill="#bffc26">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+                  <JFXButton fx:id="detailsplay" alignment="CENTER" buttonType="RAISED" layoutX="35.0" layoutY="356.0" onAction="#detailsplaypOnAction" prefHeight="31.0" prefWidth="91.0" ripplerFill="#092507" style="-fx-background-color: rgba(52, 152, 219,1);" text="Play" textFill="#fcf9f9">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="DetailsDescription" alignment="TOP_LEFT" contentDisplay="TOP" graphicTextGap="0.0" layoutX="470.0" layoutY="89.0" prefHeight="282.0" prefWidth="760.0" style="-fx-background-color: rgba(0,0,0,0.3);" text="ergtr" textFill="#f8f7f7" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXButton fx:id="gamesbtn" layoutX="1361.0" layoutY="26.0" onAction="#gamesbtnAction" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: green;" text="Search" textFill="#fffdfd" AnchorPane.rightAnchor="22.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXTextField fx:id="search" focusColor="#85d721" layoutX="1143.0" layoutY="28.0" onKeyReleased="#searchkeytype" prefHeight="25.0" prefWidth="202.0" style="-fx-text-fill: white;" unFocusColor="#e8e0e0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="28.0" />
+            <ComboBox fx:id="Categorycom" layoutX="14.0" layoutY="28.0" prefWidth="150.0" promptText="Type" style="-fx-background-color: green; -fx-text-fill: white;" />
+            <JFXListView fx:id="serchresultlist" accessibleText="bfgnfdhg,trhgrthrt" cellVerticalMargin="0.0" layoutX="1143.0" layoutY="55.0" onMouseClicked="#serchresultlistMouseClicked" prefHeight="96.0" prefWidth="202.0" style="-fx-background-color: rgba(0,0,0,0); -fx-text-fill: white;" stylesheets="@listview.css" AnchorPane.rightAnchor="111.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXListView>
+            <JFXButton fx:id="sort" buttonType="RAISED" layoutX="182.0" layoutY="28.0" onAction="#sortby" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Sort" />
+            <JFXButton fx:id="Mostplayed" buttonType="RAISED" layoutX="259.0" layoutY="28.0" onAction="#MostplayedA" prefHeight="25.0" prefWidth="102.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Most Popular " />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="homebutton" ellipsisString="" layoutX="33.0" layoutY="73.0" onAction="#homebuttonA" prefHeight="37.0" prefWidth="36.0" textFill="#f5f2f2">
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@003210-green-jelly-icon-media-a-media31-back.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <ImageView fitHeight="119.0" fitWidth="341.0" layoutX="532.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="ip" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="1211.0" layoutY="14.0" prefHeight="26.0" prefWidth="137.0" text="192.168.43.01" textFill="#2eee08">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXDrawer fx:id="Drower" layoutX="-5.0" layoutY="-4.0" prefHeight="710.0" prefWidth="312.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <JFXHamburger fx:id="hamburger" layoutX="1319.0" layoutY="54.0" onMousePressed="#hamburgerAction" prefHeight="29.0" prefWidth="30.0" styleClass="jfx-hamburger" stylesheets="@../gamefx/styles.css" />
+   </children>
+</AnchorPane>

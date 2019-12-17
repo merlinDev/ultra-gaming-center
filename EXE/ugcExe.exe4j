@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exe4j version="4.5.2" transformSequenceNumber="1">
+  <directoryPresets config="D:/PCJT/Assignments/SOFTWARE PROJECT/final/git/ugc/dist" />
+  <application name="ugc" distributionSourceDir="D:/PCJT/Assignments/SOFTWARE PROJECT/EXE">
+    <languages>
+      <principalLanguage id="en" customLocalizationFile="" />
+    </languages>
+  </application>
+  <executable name="ugc" type="2" iconSet="true" iconFile="D:/PCJT/Assignments/SOFTWARE PROJECT/logo/logoSMBlack.ico" executableDir="." redirectStderr="false" stderrFile="error.log" stderrMode="overwrite" redirectStdout="false" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="1" changeWorkingDirectory="true" workingDirectory="." singleInstance="false" serviceStartType="2" serviceDependencies="" serviceDescription="" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false" amd64="true">
+    <messageSet />
+    <versionInfo include="false" fileVersion="" fileDescription="" legalCopyright="" internalName="" productName="" companyName="" productVersion="" />
+  </executable>
+  <splashScreen show="false" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="" java6SplashScreen="false">
+    <text>
+      <statusLine x="20" y="20" text="" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+      <versionLine x="20" y="40" text="version %VERSION%" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+    </text>
+  </splashScreen>
+  <java mainClass="finalsoftwareproject.RunApp" vmParameters="" arguments="" allowVMPassthroughParameters="false" preferredVM="" bundleRuntime="true" minVersion="1.8" maxVersion="" allowBetaVM="false" jdkOnly="false">
+    <searchSequence>
+      <registry />
+      <envVar name="JAVA_HOME" />
+      <envVar name="JDK_HOME" />
+    </searchSequence>
+    <classPath>
+      <archive location="../final/git/ugc/lib/barcode4j-2.1.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-anim.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-awt-util.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-bridge.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-css.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-dom.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-gvt.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-parser.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-script.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-svg-dom.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-util.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/batik-xml.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/commons-beanutils-1.8.2.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/commons-collections-3.2.1.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/commons-digester-2.1.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/commons-logging-1.1.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/controlsfx-8.40.12.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/controlsfx-samples-8.20.9.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/DBConGaming-1.0-SNAPSHOT.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/eclipselink.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/fxsampler-1.0.8.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/groovy-all-2.0.1.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/iText-2.1.7.js2.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/jasperreports-5.6.0.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/javax.mail-1.5.6.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/javax.mail-api-1.5.6.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/javax.persistence_2.1.0.v201304241213.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/jcalendar-1.4.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/jfoenix.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/junit-4.4.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/log4j-1.2.15.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/mysql-connector-java-5.1.40-bin.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/openjfx-dialogs-1.0.3.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/org.eclipse.persistence.jpa.jpql_2.5.0.v20130507-3faac2b.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/org.json-20130603.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/w3c.css.sac-1.3.0.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/w3c.jar" failOnError="false" />
+      <archive location="../final/git/ugc/lib/xml-apis-2.10.0.jar" failOnError="false" />
+      <archive location="../final/git/ugc/dist/ugc1.jar" failOnError="false" />
+    </classPath>
+    <nativeLibraryDirectories />
+  </java>
+  <includedFiles />
+  <unextractableFiles />
+</exe4j>
+

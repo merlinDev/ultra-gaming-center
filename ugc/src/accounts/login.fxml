@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--author: Roshana Pitigala-->
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #1C1B1C;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accounts.LoginController">
+    <children>
+      <ImageView fx:id="background" fitHeight="768.0" fitWidth="1366.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../res/loginBack.png" />
+         </image>
+      </ImageView>
+          <AnchorPane fx:id="loginStage" layoutX="293.0" layoutY="271.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" style="-fx-background-radius: 10;">
+              <children>
+                  <AnchorPane fx:id="loginPane" layoutX="-2.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <JFXTextField fx:id="id" focusColor="#009688" labelFloat="true" layoutX="125.0" layoutY="130.0" onAction="#loginActionPerformed" prefWidth="350.0" promptText="Token ID or Username" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="150.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXTextField>
+                          <JFXPasswordField fx:id="pass" focusColor="#009688" labelFloat="true" layoutX="125.0" layoutY="150.0" onAction="#loginActionPerformed" prefWidth="350.0" promptText="Password" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" visible="false" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="150.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXPasswordField>
+                          <JFXButton id="loginBtn" fx:id="nextBtn" layoutX="74.0" layoutY="189.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#loginActionPerformed" onMouseEntered="#OnMouseEnter" onMouseExited="#OnMouseExit" prefWidth="350.0" style="-fx-background-color: #0cb754;" text="Next" textFill="WHITE" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="220.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXButton>
+                          <Label fx:id="label" layoutX="74.0" layoutY="53.0" prefHeight="39.0" prefWidth="350.0" text="Enter your Token ID, Username, NIC or Email" textFill="WHITE" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="70.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                          <Hyperlink fx:id="forgotPass" layoutX="74.0" layoutY="243.0" onAction="#forgotPassActionPerformed" text="Forgot Password?" textFill="#bfbfbf" visible="false" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="272.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Hyperlink>
+                      </children>
+                      <effect>
+                          <DropShadow height="38.79" offsetX="4.0" offsetY="4.0" radius="14.4475" />
+                      </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="forgotPassPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <JFXButton id="loginBtn" fx:id="forgotPassNextBtn" layoutX="155.0" layoutY="274.0" mnemonicParsing="false" onAction="#forgotPassNextActionPerformed" onMouseEntered="#OnMouseEnter" onMouseExited="#OnMouseExit" prefHeight="37.0" prefWidth="330.0" style="-fx-background-color: #0cb754;" text="Continue" textFill="WHITE" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="144.0" AnchorPane.rightAnchor="126.0" AnchorPane.topAnchor="274.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXButton>
+                          <Label fx:id="forgotPassLabel" layoutX="37.0" layoutY="14.0" prefHeight="60.0" prefWidth="500.0" text="FirstName LastName, how would you like to reset your password?" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="12.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                          <JFXRadioButton fx:id="emailRBtn" layoutX="84.0" layoutY="73.0" onAction="#emailRBtnSelected" selected="true" text="Email me the reset code." textFill="WHITE" AnchorPane.bottomAnchor="269.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="73.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                              <toggleGroup>
+                                  <ToggleGroup fx:id="sd" />
+                              </toggleGroup>
+                          </JFXRadioButton>
+                          <JFXRadioButton fx:id="smsRBtn" layoutX="84.0" layoutY="175.0" onAction="#smsRBtnSelected" text="Text me the reset code." textFill="WHITE" toggleGroup="$sd" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="352.0" AnchorPane.topAnchor="175.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </JFXRadioButton>
+                          <JFXTextField fx:id="email" focusColor="#009688" layoutX="155.0" layoutY="100.0" prefHeight="37.0" prefWidth="350.0" promptText="Re-enter your email address" style="-fx-text-fill: fff;" unFocusColor="WHITE" AnchorPane.bottomAnchor="225.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="100.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </JFXTextField>
+                          <JFXTextField fx:id="phone" disable="true" focusColor="#009688" layoutX="157.0" layoutY="202.0" onKeyReleased="#phoneKeyReleased" onKeyTyped="#phoneTyped" prefHeight="37.0" prefWidth="350.0" promptText="Re-enter your phone number" style="-fx-text-fill: fff;" unFocusColor="WHITE" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="202.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </JFXTextField>
+                          <Hyperlink fx:id="notYou" accessibleRole="BUTTON" layoutX="273.0" layoutY="322.0" onAction="#notYouActionPerformed" text="Not You?" textFill="#bfbfbf" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="259.0" AnchorPane.topAnchor="322.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Hyperlink>
+                      </children>
+                      <effect>
+                          <DropShadow height="38.79" offsetX="4.0" offsetY="4.0" radius="14.4475" />
+                      </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="resetCodePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <JFXTextField fx:id="resetCode" focusColor="#009688" labelFloat="true" layoutX="124.0" layoutY="161.0" onAction="#RCcontinueActionPerformed" onKeyTyped="#resetCodeTyped" prefHeight="26.0" prefWidth="350.0" promptText="Reset Code" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" AnchorPane.leftAnchor="120.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXTextField>
+                          <JFXButton id="loginBtn" fx:id="RCcontinueBtn" layoutX="125.0" layoutY="222.0" mnemonicParsing="false" onAction="#RCcontinueActionPerformed" onMouseEntered="#OnMouseEnter" onMouseExited="#OnMouseExit" prefHeight="37.0" prefWidth="350.0" style="-fx-background-color: #0cb754;" text="Continue" textFill="WHITE" AnchorPane.leftAnchor="120.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXButton>
+                          <Label layoutX="122.0" layoutY="93.0" prefHeight="50.0" prefWidth="450.0" text="Check your inbox to get the password reset code and, enter it below." textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="70.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                      </children>
+                      <effect>
+                          <DropShadow height="38.79" offsetX="4.0" offsetY="4.0" radius="14.4475" />
+                      </effect>
+                  </AnchorPane>
+                  <AnchorPane fx:id="changePasswordPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="362.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                          <JFXPasswordField fx:id="newPassword" focusColor="#009688" labelFloat="true" layoutX="132.0" layoutY="116.0" onAction="#newPasswordActionPerformed" onKeyReleased="#newPasswordKeyReleased" prefHeight="33.0" prefWidth="332.0" promptText="New Password" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" AnchorPane.bottomAnchor="209.0" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="116.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXPasswordField>
+                          <JFXButton id="loginBtn" layoutX="100.0" layoutY="254.0" mnemonicParsing="false" onAction="#changePasswordActionPerformed" onMouseEntered="#OnMouseEnter" onMouseExited="#OnMouseExit" prefHeight="37.0" prefWidth="331.0" style="-fx-background-color: #0cb754;" text="Change Password" textFill="WHITE" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="254.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXButton>
+                          <Label layoutX="121.0" layoutY="26.0" prefHeight="61.0" prefWidth="332.0" text="Enter your new password. Make it stronger by using a combination of lower and upper case letters, symbols and digits." textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="26.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Label>
+                          <Hyperlink alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="307.0" onAction="#notYouActionPerformed" prefWidth="173.0" text="Cancel" textFill="#bfbfbf" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="209.0" AnchorPane.topAnchor="307.0">
+                              <font>
+                                  <Font size="14.0" />
+                              </font>
+                          </Hyperlink>
+                          <JFXPasswordField fx:id="confirmPassword" focusColor="#009688" labelFloat="true" layoutX="100.0" layoutY="180.0" onAction="#changePasswordActionPerformed" onKeyReleased="#confirmPasswordKeyReleased" prefHeight="33.0" prefWidth="332.0" promptText="Confirm New Password" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="132.0" AnchorPane.topAnchor="180.0">
+                              <font>
+                                  <Font size="16.0" />
+                              </font>
+                          </JFXPasswordField>
+                          <Label fx:id="strength" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="309.0" layoutY="162.0" prefHeight="17.0" prefWidth="144.0" text="Strength" textFill="#ff8e8e" visible="false" />
+                      </children>
+                      <effect>
+                          <DropShadow height="38.79" offsetX="4.0" offsetY="4.0" radius="14.4475" />
+                      </effect>
+                  </AnchorPane>
+              </children>
+          </AnchorPane>
+          <Label fx:id="subTitle" alignment="CENTER" contentDisplay="CENTER" layoutY="160.0" prefHeight="88.0" prefWidth="1024.0" text="Login to Ultra Gaming Center" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <font>
+                  <Font name="Calibri" size="29.0" />
+              </font>
+          </Label>
+          <Label fx:id="title" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutY="18.0" prefHeight="117.0" prefWidth="1024.0" text="Step into a Prodigious World of Gaming" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+              <font>
+                  <Font name="Calibri" size="43.0" />
+              </font>
+          </Label>
+      <Label fx:id="time" alignment="CENTER_RIGHT" layoutX="1018.0" layoutY="639.0" prefHeight="54.0" prefWidth="157.0" text="12: 58 PM" textFill="#cdc3c3" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="date" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="981.0" layoutY="676.0" prefHeight="54.0" prefWidth="285.0" text="Wednesday, November 20, 2017" textFill="#cdc3c3" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="powerBtn" contentDisplay="GRAPHIC_ONLY" layoutX="40.0" layoutY="694.0" onAction="#powerBtnActionPerformed" onMouseEntered="#powerBtnMouseEnter" onMouseExited="#powerBtnMouseExit" opacity="0.5" prefHeight="40.0" prefWidth="40.0" ripplerFill="WHITE" text="Power" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="25.0">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D height="60.0" width="60.0" />
+               </viewport>
+               <image>
+                  <Image url="@../res/power.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+    </children>
+</AnchorPane>

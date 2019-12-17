@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="381.0" prefWidth="639.0" style="-fx-background-color: #222;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gamefx.GuestDetailsController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="12.0" prefHeight="354.0" prefWidth="609.0" style="-fx-background-color: black;">
+         <children>
+            <JFXTextField fx:id="TokenID" editable="false" focusColor="#0fcc57" labelFloat="true" layoutX="34.0" layoutY="44.0" promptText="Token ID" style="-fx-text-fill: white;" unFocusColor="#fffcfc">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="PackagePrice" editable="false" focusColor="#0fcc57" labelFloat="true" layoutX="356.0" layoutY="135.0" promptText="Package Price" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="PackageTime" editable="false" focusColor="#0fcc57" labelFloat="true" layoutX="34.0" layoutY="135.0" prefHeight="25.0" prefWidth="169.0" promptText="Package Time" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="StartingTime" editable="false" focusColor="#0fcc57" labelFloat="true" layoutX="34.0" layoutY="255.0" promptText="Started Time" style="-fx-text-fill: #fffcfc;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="EndTime" editable="false" focusColor="#0fcc57" labelFloat="true" layoutX="364.0" layoutY="255.0" prefHeight="25.0" prefWidth="154.0" promptText="End Time" style="-fx-text-fill: white;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
